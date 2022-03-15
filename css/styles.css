@@ -16,15 +16,44 @@
 }
 
 body{
-    background-color: hsl(185, 75%, 39%);
+    background-color: hsl(185, 75%, 39%);   
 }
+
+.backImg{
+    overflow: hidden;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    margin-top: -30vh; /*I had to add this because for some reason it kept pushing my figure down */
+}
+
+#topCircleContainer{
+    position: absolute;
+}
+
+#bottomCircleContainer{
+    position: absolute;
+}
+
+#topCircle{
+    margin-top: -50vh;
+    margin-left: -10vw;
+}
+
+#bottomCircle{
+    margin-top: 50vh;
+    margin-left: 50vw;
+}
+
+
 
 .card{
     background-color: white;
     display: flex;
     flex-direction: column;
     max-width: 350px;
-    margin: 30px auto 0 auto;
+    margin: 30vh auto 0 auto;
     border-radius: 15px;
     box-shadow: rgba(8, 70, 94, 0.5048) 0px 5px 20px;
 }
@@ -66,6 +95,7 @@ body{
     font-size: 18px;
     font-weight: 400;
     color: hsl(227, 10%, 46%);
+
 }
 
 .place {
@@ -73,6 +103,7 @@ body{
     color: hsl(227, 10%, 46%);
     font-size: 14px;
     font-weight: 400;
+    margin-top: .5rem;
 }
 
 .metrics{
@@ -94,6 +125,7 @@ body{
     font-size: 18px;
     font-weight: 700;
     color: hsl(229, 23%, 23%);
+    margin-bottom: .5rem;
 }
 
 .invdividualMetric p{
