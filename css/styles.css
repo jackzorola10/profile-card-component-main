@@ -6,7 +6,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 .attribution { 
     font-size: 11px; 
     text-align: center; 
@@ -14,10 +13,13 @@
 .attribution a { 
     color: hsl(228, 45%, 44%); 
 }
-
 body{
     background-color: hsl(185, 75%, 39%);   
 }
+
+/* ############################################## */
+/* ########### BACKGROUND CIRCLES ############# */
+/* ############################################## */
 
 .backImg{
     overflow: hidden;
@@ -27,43 +29,38 @@ body{
     z-index: -1;
     margin-top: -30vh; /*I had to add this because for some reason it kept pushing my figure down */
 }
-
 #topCircleContainer{
     position: absolute;
 }
-
 #bottomCircleContainer{
     position: absolute;
 }
-
 #topCircle{
     margin-top: -50vh;
     margin-left: -10vw;
 }
-
 #bottomCircle{
     margin-top: 50vh;
     margin-left: 50vw;
 }
 
 
-
+/* ############################################## */
+/* ################### CARD ##################### */
+/* ############################################## */
 .card{
     background-color: white;
     display: flex;
     flex-direction: column;
-    max-width: 350px;
-    margin: 30vh auto 0 auto;
+    margin: 20vh auto 0 auto;
     border-radius: 15px;
     box-shadow: rgba(8, 70, 94, 0.5048) 0px 5px 20px;
 }
-
 .profileAndBackground{
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-
 .profileImg{
     width: 6rem;
     height: 6rem;
@@ -71,11 +68,9 @@ body{
     border: 5px solid #fff;
     border-radius: 5rem;
 }
-
 .backgroundImg{
     border-radius: 15px 15px 0 0;
 }
-
 .mainInfo{
     display: flex;
     font-family: 'Kumbh Sans', sans-serif;
@@ -83,13 +78,11 @@ body{
     text-align: center;
     margin: 24px 0;
 }
-
 .name {
     display: inline;
     font-size: 18px;
     color: hsl(229, 23%, 23%);
 }
-
 .age {
     display: inline;
     font-size: 18px;
@@ -97,7 +90,6 @@ body{
     color: hsl(227, 10%, 46%);
 
 }
-
 .place {
     width: 100%;
     color: hsl(227, 10%, 46%);
@@ -105,7 +97,6 @@ body{
     font-weight: 400;
     margin-top: .5rem;
 }
-
 .metrics{
     display: flex;
     flex-direction: row;
@@ -113,23 +104,36 @@ body{
     border-top: 1px solid hsl(228, 9%, 92%);
     font-family: 'Kumbh Sans', sans-serif;
 }
-
 .invdividualMetric{
     display: flex;
     flex-direction: column;
     text-align: center;
     margin: 24px 0;
 }
-
 .invdividualMetric h1 {
     font-size: 18px;
     font-weight: 700;
     color: hsl(229, 23%, 23%);
     margin-bottom: .5rem;
 }
-
 .invdividualMetric p{
     font-size: 10px;
     letter-spacing: 1.5px;
     color: hsl(227, 10%, 46%);
+}
+
+/* ############################################## */
+/* ######### MEDIA QUERIES SENSITIVES ########### */
+/* ############################################## */
+
+@media (max-width: 375px) {
+    .card{
+        width: 90%;
+    }
+}
+
+@media (min-width: 376px) {
+    .card{
+        max-width: 350px;      
+    }
 }
