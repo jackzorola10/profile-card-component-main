@@ -25,7 +25,7 @@ body{
     overflow: hidden;
     position: absolute;
     width: 100vw;
-    height: 100vh;
+    height: 110vh;
     z-index: -1;
     margin-top: -30vh; /*I had to add this because for some reason it kept pushing my figure down */
 }

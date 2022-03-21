@@ -11,6 +11,7 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
+  - [Continous development](#continuous-development)
 - [Author](#author)
 
 
@@ -39,6 +40,52 @@ You can use any tools you like to help you complete the challenge. So if you've 
 This is the first one of the challenges I did with a relatively high Lighthouse Report Score. Some of the points mentioned to fix was the fact that the _"Document doesn't use legible font sizes"_ but these were as specified in the Figma design. 
 
 I think it makes a good point about the communication between development and design, to let them know about these specific type of issues. 
+
+### Continuous development
+
+In order to do the circles on the background I did the following:
+
+**HTML**
+```
+    <figure class="backImg">                
+      <div id="topCircleContainer">
+        <img src="images/bg-pattern-top.svg" alt="" id="topCircle">
+      </div>
+      <div id="bottomCircleContainer">
+        <img src="images/bg-pattern-bottom.svg" alt="" id="bottomCircle">
+      </div>
+    </figure>
+```
+
+**CSS**
+```
+.backImg{
+    overflow: hidden;
+    position: absolute;
+    width: 100vw;
+    height: 110vh;
+    z-index: -1;
+    margin-top: -30vh; /*I had to add this because for some reason it kept pushing my figure down */
+}
+#topCircleContainer{
+    position: absolute;
+}
+#bottomCircleContainer{
+    position: absolute;
+}
+#topCircle{
+    margin-top: -50vh;
+    margin-left: -10vw;
+}
+#bottomCircle{
+    margin-top: 50vh;
+    margin-left: 50vw;
+}
+```
+
+**My problem**
+I have some doubts, I found myself in the situation that for some reason my ```<figure>``` did not covered the entire background I had to give it a ```height: 110vh;``` but this was not enough as my content kept (for some reason unknown to me) being pushed down. So I had to add ```margin-top: -30vh;```. Not sure what I may have been missing here.
+
 
 ## Author
 - Website - [jackzorola10](https://github.com/jackzorola10)
